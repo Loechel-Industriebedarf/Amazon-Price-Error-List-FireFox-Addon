@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "Amazon-Price-Error-List",
+  "version": "1.0",
+
+  "description": "This addon downloads a list of all price alerts on your Amazon seller account.",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  
+  "browser_specific_settings": {
+	  "gecko": {
+		"id": "maik.riedlsperger@gmail.com"
+	  }
+	},
+
+  "content_scripts": [
+    {
+      "matches": ["*://sellercentral.amazon.de/inventory?viewId=PRICEALERTS*"],
+      "js": ["amazonPriceErrorList.js"]
+    }
+  ]
+
+}
